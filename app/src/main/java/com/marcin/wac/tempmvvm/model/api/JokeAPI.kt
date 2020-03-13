@@ -7,11 +7,15 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface JokeAPI {
 
     @GET("/jokes/random/15")
     suspend fun getJokes() : Response<JokeResponse>
+
+    @GET("/jokes/{id}")
+    suspend fun getJokeById(@Path("id") jokeId: String) : Response<JokeResponse>
 
     companion object{
         operator fun invoke(networkConnectionInterceptor: NetworkConnectionInterceptor

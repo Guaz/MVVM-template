@@ -8,4 +8,8 @@ class JokeRepository(private val jokeAPI: JokeAPI) : SafeApiRequest(){
     suspend fun fetchJokes(): JokeResponse {
         return apiRequest<JokeResponse> { jokeAPI.getJokes() }
     }
+
+    suspend fun getJokeById(id: String): JokeResponse {
+        return apiRequest<JokeResponse> { jokeAPI.getJokeById(id) }
+    }
 }

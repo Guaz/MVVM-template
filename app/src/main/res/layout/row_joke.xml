@@ -18,6 +18,7 @@
             android:id="@+id/row_joke_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{joke.idString}"
             tools:text="Joke nr 1" />
 
         <TextView
