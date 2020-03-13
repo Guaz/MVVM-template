@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="joke"
+            type="com.marcin.wac.tempmvvm.model.modelClass.Joke" />
+    </data>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/row_joke_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Joke nr 1" />
+
+        <TextView
+            android:id="@+id/row_joke_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{joke.joke}"
+            tools:text="Knock knock, knock, knock." />
+    </LinearLayout>
+</layout>
